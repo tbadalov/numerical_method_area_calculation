@@ -5,7 +5,11 @@ using namespace std;
 int main()
 {
     Function f = new Function();
-    f.read();
+    if ( !f.read() )
+    {
+        cout << "Error" << endl;
+        return -1;
+    }
     double a, b, n;
     cin >> a >> b >> n;
     if ( n == 0 )
